@@ -3,21 +3,13 @@
 
 import PackageDescription
 
-let package = Package(
-    name: "Persisted Scroll Position",
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "Persisted Scroll Position",
-            targets: ["Persisted Scroll Position"]),
-    ],
+let package = Package (
+    name: "Persisted Scroll Position" ,
+		platforms:  [ .iOS ( .v14 )  , .macOS ( .v11 ) ] ,
+    products: [ .library ( name: "Persisted Scroll Position" , targets: [ "Persisted Scroll Position" ] ) , ] ,
+		
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "Persisted Scroll Position"),
-        .testTarget(
-            name: "Persisted Scroll PositionTests",
-            dependencies: ["Persisted Scroll Position"]),
-    ]
+        .target (  name: "Persisted Scroll Position" ) ,
+        .testTarget ( name: "Persisted Scroll PositionTests" , dependencies: [ "Persisted Scroll Position" ] ) ,
+		] , swiftLanguageVersions: [ .v5 , .version ( "6" ) ]
 )
