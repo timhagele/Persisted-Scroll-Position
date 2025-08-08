@@ -12,13 +12,11 @@ struct Maintained_Scroll_Position_Demo: View {
 	@State var textItems: Array < String > = Array ( repeating: "" , count: textFieldCount )
 	var body: some View {
 		MaintainedScrollPosition {
-		ScrollView {
 			VStack ( alignment: .leading , spacing: 10 , content: {
 				ForEach ( 0..<textFieldCount , id:\.self ) { i in
 					MultilineTextFieldView2 ( text: self.$textItems [ i ] , placeholder: "#\( i.description ) TextField" )
 				}
 			} ) .navigationTitle ( "MaintainedScrollPosition" )
-			}
 		}
 	}
 }

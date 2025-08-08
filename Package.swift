@@ -9,7 +9,9 @@ let package = Package (
     products: [ .library ( name: "Persisted Scroll Position" , targets: [ "Persisted Scroll Position" ] ) , ] ,
 		
     targets: [
+      
         .target (  name: "Persisted Scroll Position" ) ,
         .testTarget ( name: "Persisted Scroll PositionTests" , dependencies: [ "Persisted Scroll Position" ] ) ,
+        
 		] , swiftLanguageVersions: [ .v5 , .version ( "6" ) ]
 )
